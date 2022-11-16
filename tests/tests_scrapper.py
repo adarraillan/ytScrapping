@@ -66,4 +66,4 @@ def test_doTheJob():
 
 #test getTheInputFile
 def test_getTheInputFile():
-    assert isinstance(scrapper.getTheInputFile('input.json'), list)
+    assert isinstance(scrapper.getTheInputFile('input.json', 'output.json'), list)

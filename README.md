@@ -41,8 +41,7 @@ python scrapper.py --input input.json --output output.json
 ------------------------------------------------------------------------------------------------------------------------------
 
 Pour lancer les tests :
-python -m pytest tests/test_scrapper.py
-coverage run -m pytest tests/test_scrapper.py
+python -m pytest tests/test_scrapper.py OR coverage run -m pytest tests/test_scrapper.py
 
 ------------------------------------------------------------------------------------------------------------------------------
 

@@ -75,7 +75,7 @@ def getTheVideoComments(video_id : str)-> list:
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         commentsList = soup.find_all("ytd-comment-thread-renderer", {"class": "style-scope ytd-item-section-renderer"}, limit = 5)
         timer += 1
-        if timer == 3:
+        if timer == 10:
             print('--',getTheVideoTitle(soup), '-- takes to much time to load the comments, maybe there is no comments')
             break
 
@@ -117,7 +117,7 @@ def writeTheOutputFile(dictionary : dict, outputFile : str):
         json.dump(lst, f, ensure_ascii=False)
 
 
-def doTheJob(id, outputFile):
+def doTheJob(id : str, outputFile : str):
     dictionary = createADictionnaryWithAllTheInformations(id)
     writeTheOutputFile(dictionary, outputFile)
 
